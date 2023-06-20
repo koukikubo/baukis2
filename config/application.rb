@@ -10,9 +10,11 @@ module Baukis2
   class Application < Rails::Application
     config.load_defaults 6.0
 
-    config.time_zone = "Tokyo"
+    config.time_zone = "Tokyo" #日本時間に設定（世界時間で9時間の時差がある為。）
     config.i18n.load_path +=
-      Dir[Rails.root.join("config", "locales", "**", "*.{rb,yml}").to_s]
-    config.i18n.default_locale = :ja
+      Dir[Rails.root.join("config", "locales", "**", "*.{rb,yml}").to_s] 
+      #(国際化の為のデータファイル)のロードパスを設定。
+      #config/localesディレクトリー以下を再起的に読み込む設定。
+    config.i18n.default_locale = :ja #日本語の設定。
   end
 end
