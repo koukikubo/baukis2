@@ -8,12 +8,13 @@ Bundler.require(*Rails.groups)
 
 module Baukis2
   class Application < Rails::Application
-    # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration can go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded after loading
-    # the framework and any gems in your application.
+    config.time_zone = "Tokyo" #日本時間に設定（世界時間で9時間の時差がある為。）
+    config.i18n.load_path +=
+      Dir[Rails.root.join("config", "locales", "**", "*.{rb,yml}").to_s] 
+      #(国際化の為のデータファイル)のロードパスを設定。
+      #config/localesディレクトリー以下を再起的に読み込む設定。
+    config.i18n.default_locale = :ja #日本語の設定。
   end
 end
