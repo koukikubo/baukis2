@@ -11,7 +11,4 @@ Rails.application.routes.draw do
   namespace :customer do
     root "top#index"
   end
-  
-  
->>>>>>> parent of 393b878 (Revert "Revert "ルーティングの設定"")
 end
