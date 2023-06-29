@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-
+  root  'baukis2#index'
   namespace :staff do
     root "top#index"
   end

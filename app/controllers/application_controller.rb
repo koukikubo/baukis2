@@ -1,8 +1,10 @@
 class ApplicationController < ActionController::Base
   layout :set_layout
 
-  rescue_from StandardError, with: :rescue500
+  class Forbidden < ActionController::ActionControllerError; end
+  class IpAddressRejected < ActionController::ActionControllerError; end
 
+  included ErorrHandlers if Rails.env.production?
 
   private def set_layout
     if params[:controller].match(%r{\A(staff|admin|customer)/})
@@ -11,9 +13,4 @@ class ApplicationController < ActionController::Base
       "customer"
     end
   end
-  
-  private def rescue500(e)
-    render "errors/internal_server_error", status: 500
-  end
-
 end
