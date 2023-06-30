@@ -8,7 +8,7 @@ class CreateStaffMembers < ActiveRecord::Migration[6.0]
       t.string :given_name_kana, null: false
       t.string :hashed_password
       t.date   :start_date, null: false
-      t.date   :end_date,   null: false
+      t.date   :end_date
       t.boolean :suspended, null: false, default: false
 
       t.timestamps
