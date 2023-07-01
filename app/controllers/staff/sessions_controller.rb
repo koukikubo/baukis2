@@ -22,7 +22,7 @@ class Staff::SessionsController < Staff::Base
     end
   end
 
-  def destory
+  def destroy
     session.delete(:staff_member_id)
     redirect_to :staff_root
   end
