@@ -9,6 +9,6 @@ class Staff::Authenticator
     @staff_member.hashed_password &&
     @staff_member.start_date <= Date.today &&
     (@staff_member.end_date.nil? || @staff_member.end_date > Date.today) &&
-    BCrypt::password.new(@staff_member.hashed_password) == raw_password
+    BCrypt::Password.new(@staff_member.hashed_password) == raw_password
   end
 end
