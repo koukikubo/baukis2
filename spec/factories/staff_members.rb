@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory ::staff_member do
+  factory :staff_member do
     sequence(:email) { |n| "member#{n}@example.com" }
     family_name { "山田" }
     given_name { "太郎" }
@@ -11,4 +11,3 @@ FactoryBot.define do
     suspended { false }
   end
 end
-    
