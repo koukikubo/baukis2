@@ -34,5 +34,4 @@ class Staff::SessionsController < Staff::Base
     flash.notice = "ログアウトしました。"
     redirect_to :staff_root
   end
-  
 end
