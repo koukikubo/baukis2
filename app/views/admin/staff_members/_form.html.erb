@@ -3,7 +3,7 @@
 </div>
 <div>
   <%= f.label :email, "メールアドレス", class: "required" %>
-  <%= f.email_field :email, size: 32, required: true %>
+  <%= f.email_field :email, size: 32, required: true %>  <%#  required: true ←必ず入力させるvalidationに近い物。%>
 </div>
 <div>
   <%= f.label :password, "パスワード", class: "required" %>
