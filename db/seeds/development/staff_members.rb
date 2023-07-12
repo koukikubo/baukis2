@@ -23,7 +23,7 @@ given_names = %w{
   梅子:ウメコ:umeko
 }
 
-20.times do |u|
+20.times do |n|
   fn = family_names[n % 4].split(":")
   gn = given_names[n % 5].split(":")
 
