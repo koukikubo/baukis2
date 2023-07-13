@@ -26,7 +26,7 @@ class Admin::StaffMembersController < Admin::Base
   end
   def update
     @staff_member = StaffMember.find(params[:id])
-    @staff_member.assign_attributes(:staff_member)
+    @staff_member.assign_attributes(staff_member_params)
     if @staff_member.save
       flash.notice = "職員アカウントを更新しました。"
       redirect_to :admin_staff_members
