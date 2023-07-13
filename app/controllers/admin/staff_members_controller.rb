@@ -26,7 +26,7 @@ class Admin::StaffMembersController < Admin::Base
   end
   def update
     @staff_member = StaffMember.find(params[:id])
-    @staff_member.assing_attributes(params[:staff_member])
+    @staff_member.assign_attributes(params[:staff_member])
     if @staff_member.save
       flash.notice = "職員アカウントを更新しました。"
       redirect_to :admin_staff_members
@@ -34,5 +34,10 @@ class Admin::StaffMembersController < Admin::Base
       render action: "edit"
     end
   end
-
+  def destroy
+    staff_member = StaffMember.find(params[:id])
+    staff_member.destroy!
+    flash.notice = "職員アカウントを削除しました。"
+    redirect_to :admin_staff_members
+  end
 end
