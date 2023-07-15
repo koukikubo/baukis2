@@ -23,11 +23,12 @@ header {
     float: none;
     text-decoration: none;
   }
-}
-a {
-  float: right;
-  color: $very_light_gray;
-  margin-left: $wide;
+
+  a {
+    float: right;
+    color: $very_light_gray;
+    margin-left: $wide;
+  }
 }
 footer {
   bottom: 0;
