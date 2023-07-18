@@ -1,0 +1,19 @@
+<div class="notes">
+  <span class="mark">*</span> 印がついた項目は必須項目です。
+</div>
+<div>
+  <%= f.label :email, "メールアドレス", class: "required" %>
+  <%= f.email_field :email, size: 32, required: true %>  <%#  required: true ←必ず入力させるvalidationに近い物。%>
+</div>
+
+<div>
+  <%= f.label :family_name, "氏名", class: "required" %>
+  <%= f.text_field :family_name, required: true %>
+  <%= f.text_field :given_name, required: true %>
+</div>
+
+<div>
+  <%= f.label :family_name_kana, "フリガナ", class: "required" %>
+  <%= f.text_field :family_name_kana, required: true %>
+  <%= f.text_field :given_name_kana, required: true %>
+</div>
