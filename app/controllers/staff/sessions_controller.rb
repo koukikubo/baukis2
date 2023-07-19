@@ -1,4 +1,5 @@
 class Staff::SessionsController < Staff::Base
+  skip_before_action :authorize
   def new 
     if  current_staff_member
       redirect_to :staff_root
