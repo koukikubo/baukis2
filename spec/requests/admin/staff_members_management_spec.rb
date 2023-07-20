@@ -6,7 +6,7 @@ describe "管理者による職員管理" do
   before do
     post  admin_session_url,
       params: {
-        admin_login_forn: {
+        admin_login_form: {
           email: administrator.email,
           password: "pw"
         }
