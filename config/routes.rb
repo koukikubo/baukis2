@@ -18,7 +18,7 @@ Rails.application.routes.draw do
       resources :staff_members do
         resources :staff_events, onry: [ :index ]
       end
-      references :staff_events, onry: [ :index ]
+      resources :staff_events, onry: [ :index ]
     end
   end
   constraints host: config[:customer][:host] do
