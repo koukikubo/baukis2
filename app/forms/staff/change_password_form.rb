@@ -1,5 +1,5 @@
 class Staff::ChangePasswordForm
-  include ActiveModel::model
+  include ActiveModel::Model
 
   attr_accessor :object, :current_password, :new_password,
     :new_password_confirmation
