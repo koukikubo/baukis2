@@ -1,0 +1,2 @@
+class StaffMemberPresenter < ModelPresenter
+end
