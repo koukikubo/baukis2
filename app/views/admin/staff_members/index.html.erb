@@ -19,7 +19,7 @@
       <th>アクション</th>
     </tr>
     <% @staff_members.each do |m| %>
-      <% p = StaffmemberPresenter.new(m, self) %>
+      <% p = StaffMemberPresenter.new(m, self) %>
       <tr>
         <td><%= m.family_name %> <%= m.given_name %></td>
         <td><%= m.family_name_kana %> <%= m.given_name_kana %></td>
