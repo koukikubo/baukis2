@@ -11,3 +11,5 @@ module HtmlBuilder
       end
     end
     root.to_html.html_safe
+  end
+end
